@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Integration Practice PDFs</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #4F46E5;
+            --primary-hover: #4338CA;
+            --bg-color: #F9FAFB;
+            --card-bg: rgba(255, 255, 255, 0.85);
+            --text-main: #1F2937;
+            --text-muted: #6B7280;
+            --border-color: #E5E7EB;
+        }
+        
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(135deg, #fdfbfb 0%, #ebedee 100%);
+            color: var(--text-main);
+            min-height: 100vh;
+            padding: 2rem;
+        }
+        
+        header {
+            text-align: center;
+            margin-bottom: 3rem;
+            padding-top: 2rem;
+        }
+        
+        h1 {
+            font-size: 3rem;
+            font-weight: 700;
+            background: -webkit-linear-gradient(45deg, #4F46E5, #EC4899);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 0.5rem;
+        }
+        
+        p.subtitle {
+            font-size: 1.1rem;
+            color: var(--text-muted);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 1.5rem;
+        }
+        
+        .card {
+            background: var(--card-bg);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255,255,255,0.3);
+            border-radius: 16px;
+            padding: 1.5rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+            transition: all 0.3s ease;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            border-color: rgba(79, 70, 229, 0.3);
+        }
+        
+        .card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid var(--border-color);
+        }
+        
+        .card-header h3 {
+            font-size: 1.25rem;
+            font-weight: 600;
+        }
+        
+        .seed-badge {
+            background: #EEF2FF;
+            color: var(--primary);
+            padding: 0.25rem 0.75rem;
+            border-radius: 9999px;
+            font-size: 0.85rem;
+            font-weight: 500;
+        }
+        
+        .card-body p {
+            color: var(--text-muted);
+            margin-bottom: 1.5rem;
+            font-size: 0.95rem;
+        }
+        
+        .card-actions {
+            display: flex;
+            gap: 0.75rem;
+            margin-top: auto;
+        }
+        
+        .btn {
+            flex: 1;
+            display: inline-block;
+            text-align: center;
+            padding: 0.6rem 1rem;
+            border-radius: 8px;
+            font-weight: 500;
+            font-size: 0.95rem;
+            text-decoration: none;
+            transition: all 0.2s;
+            cursor: pointer;
+        }
+        
+        .btn-primary {
+            background-color: var(--primary);
+            color: white;
+            border: 1px solid var(--primary);
+        }
+        
+        .btn-primary:hover {
+            background-color: var(--primary-hover);
+            box-shadow: 0 0 15px rgba(79, 70, 229, 0.4);
+        }
+        
+        .btn-outline {
+            background-color: transparent;
+            color: var(--primary);
+            border: 1px solid var(--primary);
+        }
+        
+        .btn-outline:hover {
+            background-color: #EEF2FF;
+        }
+        
+        footer {
+            text-align: center;
+            margin-top: 4rem;
+            padding-top: 2rem;
+            border-top: 1px solid var(--border-color);
+            color: var(--text-muted);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Integration Practice Hub</h1>
+        <p class="subtitle">Download randomly generated integration problem sets. Each PDF contains 8 problems selected from different difficulty categories, complete with step-by-step solutions on the second page.</p>
+    </header>
+    
+    <div class="container">
+        <div class="grid">
+            
+        <div class="card">
+            <div class="card-header">
+                <h3>Practice #1</h3>
+                <span class="seed-badge">Seed: 1737</span>
+            </div>
+            <div class="card-body">
+                <p>1 page of Problems, 1 page of Answers</p>
+                <div class="card-actions">
+                    <a href="../results/pdfs/practice_1737.pdf" target="_blank" class="btn btn-outline">View</a>
+                    <a href="../results/pdfs/practice_1737.pdf" download="practice_1737.pdf" class="btn btn-primary">Download</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="card">
+            <div class="card-header">
+                <h3>Practice #2</h3>
+                <span class="seed-badge">Seed: 1869</span>
+            </div>
+            <div class="card-body">
+                <p>1 page of Problems, 1 page of Answers</p>
+                <div class="card-actions">
+                    <a href="../results/pdfs/practice_1869.pdf" target="_blank" class="btn btn-outline">View</a>
+                    <a href="../results/pdfs/practice_1869.pdf" download="practice_1869.pdf" class="btn btn-primary">Download</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="card">
+            <div class="card-header">
+                <h3>Practice #3</h3>
+                <span class="seed-badge">Seed: 2675</span>
+            </div>
+            <div class="card-body">
+                <p>1 page of Problems, 1 page of Answers</p>
+                <div class="card-actions">
+                    <a href="../results/pdfs/practice_2675.pdf" target="_blank" class="btn btn-outline">View</a>
+                    <a href="../results/pdfs/practice_2675.pdf" download="practice_2675.pdf" class="btn btn-primary">Download</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="card">
+            <div class="card-header">
+                <h3>Practice #4</h3>
+                <span class="seed-badge">Seed: 2721</span>
+            </div>
+            <div class="card-body">
+                <p>1 page of Problems, 1 page of Answers</p>
+                <div class="card-actions">
+                    <a href="../results/pdfs/practice_2721.pdf" target="_blank" class="btn btn-outline">View</a>
+                    <a href="../results/pdfs/practice_2721.pdf" download="practice_2721.pdf" class="btn btn-primary">Download</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="card">
+            <div class="card-header">
+                <h3>Practice #5</h3>
+                <span class="seed-badge">Seed: 3858</span>
+            </div>
+            <div class="card-body">
+                <p>1 page of Problems, 1 page of Answers</p>
+                <div class="card-actions">
+                    <a href="../results/pdfs/practice_3858.pdf" target="_blank" class="btn btn-outline">View</a>
+                    <a href="../results/pdfs/practice_3858.pdf" download="practice_3858.pdf" class="btn btn-primary">Download</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="card">
+            <div class="card-header">
+                <h3>Practice #6</h3>
+                <span class="seed-badge">Seed: 4725</span>
+            </div>
+            <div class="card-body">
+                <p>1 page of Problems, 1 page of Answers</p>
+                <div class="card-actions">
+                    <a href="../results/pdfs/practice_4725.pdf" target="_blank" class="btn btn-outline">View</a>
+                    <a href="../results/pdfs/practice_4725.pdf" download="practice_4725.pdf" class="btn btn-primary">Download</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="card">
+            <div class="card-header">
+                <h3>Practice #7</h3>
+                <span class="seed-badge">Seed: 4901</span>
+            </div>
+            <div class="card-body">
+                <p>1 page of Problems, 1 page of Answers</p>
+                <div class="card-actions">
+                    <a href="../results/pdfs/practice_4901.pdf" target="_blank" class="btn btn-outline">View</a>
+                    <a href="../results/pdfs/practice_4901.pdf" download="practice_4901.pdf" class="btn btn-primary">Download</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="card">
+            <div class="card-header">
+                <h3>Practice #8</h3>
+                <span class="seed-badge">Seed: 5088</span>
+            </div>
+            <div class="card-body">
+                <p>1 page of Problems, 1 page of Answers</p>
+                <div class="card-actions">
+                    <a href="../results/pdfs/practice_5088.pdf" target="_blank" class="btn btn-outline">View</a>
+                    <a href="../results/pdfs/practice_5088.pdf" download="practice_5088.pdf" class="btn btn-primary">Download</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="card">
+            <div class="card-header">
+                <h3>Practice #9</h3>
+                <span class="seed-badge">Seed: 5236</span>
+            </div>
+            <div class="card-body">
+                <p>1 page of Problems, 1 page of Answers</p>
+                <div class="card-actions">
+                    <a href="../results/pdfs/practice_5236.pdf" target="_blank" class="btn btn-outline">View</a>
+                    <a href="../results/pdfs/practice_5236.pdf" download="practice_5236.pdf" class="btn btn-primary">Download</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="card">
+            <div class="card-header">
+                <h3>Practice #10</h3>
+                <span class="seed-badge">Seed: 6296</span>
+            </div>
+            <div class="card-body">
+                <p>1 page of Problems, 1 page of Answers</p>
+                <div class="card-actions">
+                    <a href="../results/pdfs/practice_6296.pdf" target="_blank" class="btn btn-outline">View</a>
+                    <a href="../results/pdfs/practice_6296.pdf" download="practice_6296.pdf" class="btn btn-primary">Download</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="card">
+            <div class="card-header">
+                <h3>Practice #11</h3>
+                <span class="seed-badge">Seed: 6402</span>
+            </div>
+            <div class="card-body">
+                <p>1 page of Problems, 1 page of Answers</p>
+                <div class="card-actions">
+                    <a href="../results/pdfs/practice_6402.pdf" target="_blank" class="btn btn-outline">View</a>
+                    <a href="../results/pdfs/practice_6402.pdf" download="practice_6402.pdf" class="btn btn-primary">Download</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="card">
+            <div class="card-header">
+                <h3>Practice #12</h3>
+                <span class="seed-badge">Seed: 6620</span>
+            </div>
+            <div class="card-body">
+                <p>1 page of Problems, 1 page of Answers</p>
+                <div class="card-actions">
+                    <a href="../results/pdfs/practice_6620.pdf" target="_blank" class="btn btn-outline">View</a>
+                    <a href="../results/pdfs/practice_6620.pdf" download="practice_6620.pdf" class="btn btn-primary">Download</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="card">
+            <div class="card-header">
+                <h3>Practice #13</h3>
+                <span class="seed-badge">Seed: 6657</span>
+            </div>
+            <div class="card-body">
+                <p>1 page of Problems, 1 page of Answers</p>
+                <div class="card-actions">
+                    <a href="../results/pdfs/practice_6657.pdf" target="_blank" class="btn btn-outline">View</a>
+                    <a href="../results/pdfs/practice_6657.pdf" download="practice_6657.pdf" class="btn btn-primary">Download</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="card">
+            <div class="card-header">
+                <h3>Practice #14</h3>
+                <span class="seed-badge">Seed: 6705</span>
+            </div>
+            <div class="card-body">
+                <p>1 page of Problems, 1 page of Answers</p>
+                <div class="card-actions">
+                    <a href="../results/pdfs/practice_6705.pdf" target="_blank" class="btn btn-outline">View</a>
+                    <a href="../results/pdfs/practice_6705.pdf" download="practice_6705.pdf" class="btn btn-primary">Download</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="card">
+            <div class="card-header">
+                <h3>Practice #15</h3>
+                <span class="seed-badge">Seed: 6739</span>
+            </div>
+            <div class="card-body">
+                <p>1 page of Problems, 1 page of Answers</p>
+                <div class="card-actions">
+                    <a href="../results/pdfs/practice_6739.pdf" target="_blank" class="btn btn-outline">View</a>
+                    <a href="../results/pdfs/practice_6739.pdf" download="practice_6739.pdf" class="btn btn-primary">Download</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="card">
+            <div class="card-header">
+                <h3>Practice #16</h3>
+                <span class="seed-badge">Seed: 6903</span>
+            </div>
+            <div class="card-body">
+                <p>1 page of Problems, 1 page of Answers</p>
+                <div class="card-actions">
+                    <a href="../results/pdfs/practice_6903.pdf" target="_blank" class="btn btn-outline">View</a>
+                    <a href="../results/pdfs/practice_6903.pdf" download="practice_6903.pdf" class="btn btn-primary">Download</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="card">
+            <div class="card-header">
+                <h3>Practice #17</h3>
+                <span class="seed-badge">Seed: 7020</span>
+            </div>
+            <div class="card-body">
+                <p>1 page of Problems, 1 page of Answers</p>
+                <div class="card-actions">
+                    <a href="../results/pdfs/practice_7020.pdf" target="_blank" class="btn btn-outline">View</a>
+                    <a href="../results/pdfs/practice_7020.pdf" download="practice_7020.pdf" class="btn btn-primary">Download</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="card">
+            <div class="card-header">
+                <h3>Practice #18</h3>
+                <span class="seed-badge">Seed: 7377</span>
+            </div>
+            <div class="card-body">
+                <p>1 page of Problems, 1 page of Answers</p>
+                <div class="card-actions">
+                    <a href="../results/pdfs/practice_7377.pdf" target="_blank" class="btn btn-outline">View</a>
+                    <a href="../results/pdfs/practice_7377.pdf" download="practice_7377.pdf" class="btn btn-primary">Download</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="card">
+            <div class="card-header">
+                <h3>Practice #19</h3>
+                <span class="seed-badge">Seed: 7425</span>
+            </div>
+            <div class="card-body">
+                <p>1 page of Problems, 1 page of Answers</p>
+                <div class="card-actions">
+                    <a href="../results/pdfs/practice_7425.pdf" target="_blank" class="btn btn-outline">View</a>
+                    <a href="../results/pdfs/practice_7425.pdf" download="practice_7425.pdf" class="btn btn-primary">Download</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="card">
+            <div class="card-header">
+                <h3>Practice #20</h3>
+                <span class="seed-badge">Seed: 7859</span>
+            </div>
+            <div class="card-body">
+                <p>1 page of Problems, 1 page of Answers</p>
+                <div class="card-actions">
+                    <a href="../results/pdfs/practice_7859.pdf" target="_blank" class="btn btn-outline">View</a>
+                    <a href="../results/pdfs/practice_7859.pdf" download="practice_7859.pdf" class="btn btn-primary">Download</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="card">
+            <div class="card-header">
+                <h3>Practice #21</h3>
+                <span class="seed-badge">Seed: 7882</span>
+            </div>
+            <div class="card-body">
+                <p>1 page of Problems, 1 page of Answers</p>
+                <div class="card-actions">
+                    <a href="../results/pdfs/practice_7882.pdf" target="_blank" class="btn btn-outline">View</a>
+                    <a href="../results/pdfs/practice_7882.pdf" download="practice_7882.pdf" class="btn btn-primary">Download</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="card">
+            <div class="card-header">
+                <h3>Practice #22</h3>
+                <span class="seed-badge">Seed: 8278</span>
+            </div>
+            <div class="card-body">
+                <p>1 page of Problems, 1 page of Answers</p>
+                <div class="card-actions">
+                    <a href="../results/pdfs/practice_8278.pdf" target="_blank" class="btn btn-outline">View</a>
+                    <a href="../results/pdfs/practice_8278.pdf" download="practice_8278.pdf" class="btn btn-primary">Download</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="card">
+            <div class="card-header">
+                <h3>Practice #23</h3>
+                <span class="seed-badge">Seed: 8542</span>
+            </div>
+            <div class="card-body">
+                <p>1 page of Problems, 1 page of Answers</p>
+                <div class="card-actions">
+                    <a href="../results/pdfs/practice_8542.pdf" target="_blank" class="btn btn-outline">View</a>
+                    <a href="../results/pdfs/practice_8542.pdf" download="practice_8542.pdf" class="btn btn-primary">Download</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="card">
+            <div class="card-header">
+                <h3>Practice #24</h3>
+                <span class="seed-badge">Seed: 8694</span>
+            </div>
+            <div class="card-body">
+                <p>1 page of Problems, 1 page of Answers</p>
+                <div class="card-actions">
+                    <a href="../results/pdfs/practice_8694.pdf" target="_blank" class="btn btn-outline">View</a>
+                    <a href="../results/pdfs/practice_8694.pdf" download="practice_8694.pdf" class="btn btn-primary">Download</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="card">
+            <div class="card-header">
+                <h3>Practice #25</h3>
+                <span class="seed-badge">Seed: 8807</span>
+            </div>
+            <div class="card-body">
+                <p>1 page of Problems, 1 page of Answers</p>
+                <div class="card-actions">
+                    <a href="../results/pdfs/practice_8807.pdf" target="_blank" class="btn btn-outline">View</a>
+                    <a href="../results/pdfs/practice_8807.pdf" download="practice_8807.pdf" class="btn btn-primary">Download</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="card">
+            <div class="card-header">
+                <h3>Practice #26</h3>
+                <span class="seed-badge">Seed: 8827</span>
+            </div>
+            <div class="card-body">
+                <p>1 page of Problems, 1 page of Answers</p>
+                <div class="card-actions">
+                    <a href="../results/pdfs/practice_8827.pdf" target="_blank" class="btn btn-outline">View</a>
+                    <a href="../results/pdfs/practice_8827.pdf" download="practice_8827.pdf" class="btn btn-primary">Download</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="card">
+            <div class="card-header">
+                <h3>Practice #27</h3>
+                <span class="seed-badge">Seed: 9159</span>
+            </div>
+            <div class="card-body">
+                <p>1 page of Problems, 1 page of Answers</p>
+                <div class="card-actions">
+                    <a href="../results/pdfs/practice_9159.pdf" target="_blank" class="btn btn-outline">View</a>
+                    <a href="../results/pdfs/practice_9159.pdf" download="practice_9159.pdf" class="btn btn-primary">Download</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="card">
+            <div class="card-header">
+                <h3>Practice #28</h3>
+                <span class="seed-badge">Seed: 9166</span>
+            </div>
+            <div class="card-body">
+                <p>1 page of Problems, 1 page of Answers</p>
+                <div class="card-actions">
+                    <a href="../results/pdfs/practice_9166.pdf" target="_blank" class="btn btn-outline">View</a>
+                    <a href="../results/pdfs/practice_9166.pdf" download="practice_9166.pdf" class="btn btn-primary">Download</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="card">
+            <div class="card-header">
+                <h3>Practice #29</h3>
+                <span class="seed-badge">Seed: 9182</span>
+            </div>
+            <div class="card-body">
+                <p>1 page of Problems, 1 page of Answers</p>
+                <div class="card-actions">
+                    <a href="../results/pdfs/practice_9182.pdf" target="_blank" class="btn btn-outline">View</a>
+                    <a href="../results/pdfs/practice_9182.pdf" download="practice_9182.pdf" class="btn btn-primary">Download</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="card">
+            <div class="card-header">
+                <h3>Practice #30</h3>
+                <span class="seed-badge">Seed: 9256</span>
+            </div>
+            <div class="card-body">
+                <p>1 page of Problems, 1 page of Answers</p>
+                <div class="card-actions">
+                    <a href="../results/pdfs/practice_9256.pdf" target="_blank" class="btn btn-outline">View</a>
+                    <a href="../results/pdfs/practice_9256.pdf" download="practice_9256.pdf" class="btn btn-primary">Download</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="card">
+            <div class="card-header">
+                <h3>Practice #31</h3>
+                <span class="seed-badge">Seed: 9687</span>
+            </div>
+            <div class="card-body">
+                <p>1 page of Problems, 1 page of Answers</p>
+                <div class="card-actions">
+                    <a href="../results/pdfs/practice_9687.pdf" target="_blank" class="btn btn-outline">View</a>
+                    <a href="../results/pdfs/practice_9687.pdf" download="practice_9687.pdf" class="btn btn-primary">Download</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="card">
+            <div class="card-header">
+                <h3>Practice #32</h3>
+                <span class="seed-badge">Seed: 9755</span>
+            </div>
+            <div class="card-body">
+                <p>1 page of Problems, 1 page of Answers</p>
+                <div class="card-actions">
+                    <a href="../results/pdfs/practice_9755.pdf" target="_blank" class="btn btn-outline">View</a>
+                    <a href="../results/pdfs/practice_9755.pdf" download="practice_9755.pdf" class="btn btn-primary">Download</a>
+                </div>
+            </div>
+        </div>
+        
+        </div>
+    </div>
+    
+    <footer>
+        <p>&copy; 2026 Integration Practice Project. Generated via Python and LuaLaTeX.</p>
+    </footer>
+</body>
+</html>
