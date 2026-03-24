@@ -211,6 +211,12 @@ def main():
         <p class="subtitle">Download randomly generated integration problem sets. Each PDF contains 8 problems selected from different difficulty categories, complete with step-by-step solutions on the second page.</p>
     </header>
     
+    <div style="text-align: center; margin-bottom: 3rem;">
+        <a href="./pdfs/all_practices_combined.pdf" download="all_practices_combined.pdf" class="btn btn-primary" style="padding: 1rem 2rem; font-size: 1.1rem; border-radius: 9999px; display: inline-block; box-shadow: 0 4px 15px rgba(79, 70, 229, 0.4);">
+            📥 Download All {len(pdf_files)} Practices in One PDF
+        </a>
+    </div>
+    
     <div class="container">
         <div class="grid">
             {cards_html}
