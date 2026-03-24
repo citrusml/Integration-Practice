@@ -1,11 +1,15 @@
 import os
 import glob
+import shutil
 
 def main():
     project_root = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
     pdfs_dir = os.path.join(project_root, "results", "pdfs")
-    web_dir = os.path.join(project_root, "web")
-    os.makedirs(web_dir, exist_ok=True)
+    
+    # GitHub Pages用に docs ディレクトリを作成
+    docs_dir = os.path.join(project_root, "docs")
+    docs_pdfs_dir = os.path.join(docs_dir, "pdfs")
+    os.makedirs(docs_pdfs_dir, exist_ok=True)
     
     # Get all practice PDFs
     pdf_files = sorted(glob.glob(os.path.join(pdfs_dir, "practice_*.pdf")))
@@ -14,9 +18,11 @@ def main():
     for i, filepath in enumerate(pdf_files):
         filename = os.path.basename(filepath)
         seed = filename.replace("practice_", "").replace(".pdf", "")
-        # Copy or symlink PDF into web dir if it is to be hosted statically,
-        # but for local purpose we can just link relatively.
-        rel_path = f"../results/pdfs/{filename}"
+        
+        # GitHub Pagesで公開できるように、PDFを docs/pdfs/ にコピーする
+        shutil.copy2(filepath, os.path.join(docs_pdfs_dir, filename))
+        
+        rel_path = f"./pdfs/{filename}"
         
         cards_html += f"""
         <div class="card">
@@ -33,6 +39,7 @@ def main():
             </div>
         </div>
         """
+
         
     html_content = f"""<!DOCTYPE html>
 <html lang="en">
@@ -217,11 +224,11 @@ def main():
 </html>
 """
     
-    index_file = os.path.join(web_dir, "index.html")
+    index_file = os.path.join(docs_dir, "index.html")
     with open(index_file, "w", encoding="utf-8") as f:
         f.write(html_content)
         
-    print(f"Successfully generated {index_file} with {len(pdf_files)} PDF links.")
+    print(f"Successfully generated GitHub Pages compatible site at {index_file} with {len(pdf_files)} PDF links.")
 
 if __name__ == "__main__":
     main()
